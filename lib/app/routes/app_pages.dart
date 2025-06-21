@@ -18,7 +18,8 @@ import '../../features/firewall_game/firewall_game_screen.dart';
 import '../../features/firewall_game/firewall_game_binding.dart';
 import '../../features/audio_game/audio_game_screen.dart';
 import '../../features/audio_game/audio_game_binding.dart';
-
+import '../../features/splash/splash_screen.dart';
+import '../../features/login/login_screen.dart'; // 
 
 part 'app_routes.dart';
 
@@ -37,9 +38,14 @@ class NewsfeedScreen extends StatelessWidget {
 
 
 class AppPages {
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.SPLASH;
 
   static final routes = [
+    GetPage(
+      name: _Paths.SPLASH,
+      page: () => const SplashScreen(),
+    ),
+    GetPage(name: _Paths.LOGIN, page: () => const LoginScreen()), // <-- ADD THIS ROUTE
     GetPage(
       name: _Paths.HOME,
       page: () => HomeScreen(),

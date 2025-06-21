@@ -3,6 +3,8 @@
 part of 'app_pages.dart';
 
 abstract class Routes {
+   static const SPLASH = _Paths.SPLASH; 
+   static const LOGIN = _Paths.LOGIN; // <-- ADD THIS
   static const HOME = _Paths.HOME;
   static const MISSION_LOG = _Paths.MISSION_LOG;
   static const DATABASE = _Paths.DATABASE;
@@ -17,6 +19,8 @@ abstract class Routes {
 }
 
 abstract class _Paths {
+  static const SPLASH = '/splash'; // <-- ADD THIS
+  static const LOGIN = '/login'; // <-- ADD THIS
   static const HOME = '/home';
   static const MISSION_LOG = '/mission-log';
   static const DATABASE = '/database';

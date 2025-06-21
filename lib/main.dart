@@ -6,10 +6,13 @@ import 'package:google_fonts/google_fonts.dart';
 import 'app/controllers/game_state_controller.dart'; // <-- 1. IMPORT THE CONTROLLER
 import 'app/routes/app_pages.dart';
 import 'app/services/sound_service.dart'; 
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 Future<void> main() async {
   // 2. INITIALIZE YOUR GLOBAL CONTROLLER BEFORE RUNNING THE APP
-  WidgetsFlutterBinding.ensureInitialized();
+  
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   
   // 4. Initialize and put the service using Get.putAsync
   await Get.putAsync(() => SoundService().init());
@@ -19,6 +22,8 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(

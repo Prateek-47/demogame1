@@ -63,8 +63,8 @@ class _FileIcon extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Icon(file.isLocked ? Icons.lock_outline : icon, size: 48, color: color),
-          const SizedBox(height: 8),
+          Icon(file.isLocked ? Icons.lock_outline : icon, size: 24, color: color),
+          const SizedBox(height: 4),
           Text(
             file.fileName,
             textAlign: TextAlign.center,

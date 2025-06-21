@@ -32,7 +32,7 @@ dependencies:
     sdk: flutter
   get: ^4.7.2
   google_fonts: ^6.2.1
-
+  
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -50,6 +50,7 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
+  flutter_native_splash: ^2.4.4
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
@@ -66,11 +67,16 @@ flutter:
   assets:
     - assets/images/dossier_petrova.png
     - assets/images/placeholder_map.png
+    - assets/images/splash_logo.png
+    - assets/images/splogo.png
 
     - assets/audio/encrypted_note.mp3 # Directory containing audio assets     
     - assets/audio/button.wav
     - assets/audio/error.wav
     - assets/audio/notification.wav
+    - assets/audio/button.mp3
+    - assets/audio/error.mp3
+    - assets/audio/notification.mp3
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
@@ -97,3 +103,21 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+# pubspec.yaml
+
+# pubspec.yaml
+
+flutter_native_splash:
+  # This should be the background color of your full-screen image.
+  color: "#000000" 
+  
+  # A simple logo for the instantaneous native screen.
+  image: assets/images/splogo.png 
+
+  # Configuration for modern Android (this is required).
+  android_12:
+    image: assets/images/splogo.png
+    icon_background_color: "#000000"
+
+
+  
