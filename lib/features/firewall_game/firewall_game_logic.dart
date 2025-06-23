@@ -92,6 +92,17 @@ class FirewallGameController extends GetxController {
 
    void _onGameWon() {
     // This now shows a styled snackbar at the top of the screen.
+    
+
+    // Update the global game state as before
+    gameState.addClue('gilded_cage_accessed');
+    gameState.unlockFile('note_for_lb');
+
+    // Delay the screen closing to allow the snackbar to be seen.
+    // A duration of 2 seconds is usually a good amount of time.
+    
+    Get.back();
+    
     Get.snackbar(
       "Firewall Breached",
       "Success! Accessing account data...",
@@ -100,17 +111,8 @@ class FirewallGameController extends GetxController {
       colorText: Colors.black,
       margin: const EdgeInsets.all(12),
       borderRadius: 4,
-    );
-
-    // Update the global game state as before
-    gameState.addClue('gilded_cage_accessed');
-    gameState.unlockFile('note_for_lb');
-
-    // Delay the screen closing to allow the snackbar to be seen.
-    // A duration of 2 seconds is usually a good amount of time.
-    Future.delayed(const Duration(seconds: 2), () {
-      Get.back(); // Close the minigame screen AFTER the delay
-    });
+    ); // Close the minigame screen AFTER the delay
+    
   }
 }
 

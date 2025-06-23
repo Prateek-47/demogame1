@@ -39,6 +39,7 @@ dependencies:
   audioplayers: ^6.5.0
   animated_text_kit: ^4.2.3
   flutter_animate: ^4.5.2
+  flutter_launcher_icons: ^0.14.4
 
 dev_dependencies:
   flutter_test:
@@ -55,6 +56,19 @@ dev_dependencies:
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
+
+flutter_icons:
+  # The following section is specific to Flutter icons.
+  # It is used to generate icons for your application.
+  # For more information, see
+  image_path: "assets/images/icon.png" # Path to your icon image
+  android: "launcher_icon"
+  ios: true
+  web:
+    generate: true
+    image_path: "assets/images/icon.png" # Path to your icon image"
+    background_color: "#hexcode"
+    theme_color: "#hexcode"
 # The following section is specific to Flutter packages.
 flutter:
 
