@@ -55,7 +55,7 @@ class MessengerController extends GetxController {
       gameState.addClue(nodeToShow.triggerClue!);
       gameState.addLogEntry(
         '23:01',
-        'Contact with Petrova lost. She is a dead end for now. New keywords acquired: "Gilded Cage," "Little Bird." Her fear suggests OmniCorp is involved. Find the cage.',
+        'Contact with Petrova lost. She is a dead end for now. New keywords acquired: "gildedcage," "littlebird." Her fear suggests OmniCorp is involved. Find the cage.',
       );
     }
   }
